@@ -1,8 +1,8 @@
 import cProfile
 import logparser
 import tempfile
-ENTRIES=30
-PIDS=5000
+ENTRIES=300
+PIDS=500
 print("Analyzing logfile with {} pids with {} entries each".format(PIDS, ENTRIES))
 with tempfile.NamedTemporaryFile(mode="w+t") as f:
     for iteration in range(ENTRIES):

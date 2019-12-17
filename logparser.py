@@ -1,5 +1,6 @@
 import re
 import collections
+import argparse
 LOG_REGEX = r"(.*)\s\[(\d+)\]\s(.+)"
 log_entries = {}
 
@@ -24,4 +25,7 @@ def print_errors(file_name):
 
 
 if __name__ == "__main__":
-    pass
+    parser = argparse.ArgumentParser(description="Process logfile.")
+    parser.add_argument("file_name", help="File to be parsed")
+    args = parser.parse_args()
+    print_errors(args.file_name)
